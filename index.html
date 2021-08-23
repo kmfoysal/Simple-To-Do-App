@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Sumit Saha, Learn with Sumit" />
+    <meta name="description" content="We love JavaScript" />
+    <title>To-Do App By-DOM</title>
+    <!-- Taliwind Css  -->
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section
+      class="
+        flex flex-col
+        justify-center
+        items-center
+        bg-gray-800
+        p-12
+        lg:w-5/6
+        my-12
+        mx-auto
+      "
+    >
+      <div class="">
+        <img class="w-32 mx-auto mb-8" src="images/logo.png" alt="To-Do" />
+      </div>
+      <h1
+        id="header"
+        class="text-3xl font-semibold text-center text-yellow-400 mb-8"
+      >
+        To-Do App
+      </h1>
+
+      <form
+        class="flex md:flex-row flex-col justify-center items-center gap-4 mb-8"
+      >
+        <input
+          class="py-2 px-4 bg-gray-100 rounded-full"
+          type="text"
+          id="input-task"
+          placeholder="Write Your Task Name"
+        />
+        <button
+          class="rounded-full bg-purple-500 text-white font-semibold px-4 py-2"
+          type="submit"
+          id="addTask"
+        >
+          Add Task
+        </button>
+      </form>
+
+      <div class="grid lg:grid-cols-2 gap-8 justify-items-center">
+        <div class="bg-blue-300 rounded-xl md:w-96 w-80 p-8">
+          <h2
+            class="
+              md:text-2xl
+              text-md
+              font-semibold
+              border border-purple-600
+              rounded-md
+              px-4
+              py-2
+              mb-3
+              text-center
+            "
+          >
+            Tasks To Do
+          </h2>
+          <ul id="items">
+            <li class="text-lg mb-1">
+              <input class="" type="checkbox" /><label class="ml-2"
+                >Task Name</label
+              >
+            </li>
+            <li class="hi text-lg mb-1">
+              <input type="checkbox" /><label class="ml-2">Task Name</label>
+            </li>
+            <li class="text-lg mb-1">
+              <input type="checkbox" /><label class="ml-2">Task Name</label>
+            </li>
+          </ul>
+        </div>
+        <!--/todo-list-->
+
+        <div class="bg-green-300 rounded-xl md:w-96 w-80 p-8">
+          <h2
+            class="
+              md:text-2xl
+              text-md
+              font-semibold
+              border border-purple-600
+              rounded-md
+              px-8
+              py-2
+              mb-3
+              text-center
+            "
+          >
+            Completed Tasks
+          </h2>
+          <ul id="complete-task">
+            <!-- <li class="hi text-lg mb-1">
+              <input type="checkbox" /><label class="ml-2">Task Name</label>
+            </li> -->
+          </ul>
+        </div>
+        <!--/complete-list-->
+      </div>
+    </section>
+    <!--/container-->
+    <script src="app.js"></script>
+  </body>
+</html>
